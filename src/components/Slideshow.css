@@ -1,0 +1,88 @@
+/* Carousel Container */
+.carousel {
+    height: 500px; /* Default height */
+  }
+  
+  .carousel img {
+    object-fit: cover;
+    height: 500px; /* Default image height */
+  }
+  
+  /* Caption and Button Styles */
+  .carousel-caption {
+    display: flex; /* Make buttons align in one row */
+    justify-content: space-between; /* Distribute space evenly between buttons */
+    align-items: center;
+    bottom: 10px; /* Default position above the bottom edge */
+    width: auto;
+    margin: 0 auto; /* Center horizontally */
+    gap: 30px; /* Add space between buttons */
+  }
+  
+  .carousel-caption .btn {
+    background-color: #ffffff; /* White background */
+    color: #A37107; /* Golden brown text */
+    font-family: 'Cormorant Upright', serif; /* Elegant font */
+    border-radius: 30px; /* Fully rounded buttons */
+    padding: 6px 40px; /* Adjust padding for buttons */
+    font-size: 20px; /* Default font size */
+    font-weight: 500;
+    border: 0.5px solid #A37107; /* Golden brown border */
+    transition: all 0.3s ease; /* Smooth hover transition */
+  }
+  
+  .carousel-caption .btn:hover {
+    background-color: #D8B76C; /* Golden brown hover effect */
+    color: #ffffff; /* White text on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+  }
+  
+  /* Responsive Styles */
+  
+  /* Small Screens (Max Width: 768px) */
+  @media (max-width: 768px) {
+    .carousel {
+      height: 400px; /* Reduce carousel height */
+    }
+  
+    .carousel img {
+      height: 400px; /* Adjust image height */
+    }
+  
+    .carousel-caption {
+      flex-direction: row; /* Keep buttons in one row */
+      justify-content: center; /* Center the buttons */
+      gap: 20px; /* Add spacing between buttons */
+      bottom: 20px; /* Adjust caption position */
+      margin: 0 auto; /* Center horizontally */
+    }
+  
+    .carousel-caption .btn {
+      font-size: 18px; /* Slightly smaller font size */
+      padding: 8px 30px; /* Adjust padding */
+    }
+  }
+  
+  /* Extra Small Screens (Max Width: 480px) */
+  @media (max-width: 480px) {
+    .carousel {
+      height: 310px; /* Further reduce carousel height */
+    }
+  
+    .carousel img {
+      height: 300px; /* Adjust image height */
+    }
+  
+    .carousel-caption {
+      flex-direction: row; /* Keep buttons in one row */
+      justify-content: center; /* Center the buttons */
+      gap: 120px; /* Reduce spacing between buttons */
+      bottom: 7px; /* Adjust caption position */
+    }
+  
+    .carousel-caption .btn {
+      font-size: 10px; /* Smaller font size */
+      padding: 5px 7px; /* Adjust padding */
+    }
+  }
+  

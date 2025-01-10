@@ -1,0 +1,23 @@
+.grid-gallery {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.5rem;
+  }
+  
+  .gallery-item img {
+    height: 150px;
+  }
+  
+  @media (max-width: 768px) {
+    .grid-gallery {
+      padding: 1rem;
+    }
+  
+    .gallery-item img {
+      height: auto;
+    }
+  
+    .info p {
+      font-size: 0.8rem;
+    }
+  }
+  

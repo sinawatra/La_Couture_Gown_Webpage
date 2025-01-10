@@ -1,0 +1,26 @@
+.testimonial-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  
+  .testimonials h1 {
+    font-size: 2rem;
+  }
+  
+  .testimonials p {
+    font-size: 0.9rem;
+  }
+  
+  @media (max-width: 768px) {
+    .testimonial-grid {
+      gap: 0.5rem;
+    }
+  
+    .testimonials h1 {
+      font-size: 1.5rem;
+    }
+  
+    .testimonials p {
+      font-size: 0.8rem;
+    }
+  }
+  

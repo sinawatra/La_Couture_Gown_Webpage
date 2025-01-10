@@ -1,0 +1,24 @@
+.contact h1 {
+    font-size: 1.5rem;
+  }
+  
+  .contact form {
+    width: 90%;
+  }
+  
+  .contact input,
+  .contact textarea {
+    font-size: 0.9rem;
+  }
+  
+  @media (max-width: 768px) {
+    .contact form {
+      width: 100%;
+    }
+  
+    .contact button {
+      padding: 0.6rem 1rem;
+      font-size: 0.9rem;
+    }
+  }
+  
