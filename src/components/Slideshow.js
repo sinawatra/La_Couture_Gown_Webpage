@@ -1,9 +1,19 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate for navigation
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import "../components/Slideshow.css";
 
 const Slideshow = () => {
+  const navigate = useNavigate(); // Initialize useNavigate
+
+  const handleBookConsultation = () => {
+    navigate("/contact"); // Navigate to the Contact page
+  };
+  const handleViewGallery= () => {
+    navigate("/"); 
+  };
+
   return (
     <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
       {/* Carousel Indicators */}
@@ -34,26 +44,32 @@ const Slideshow = () => {
       <div className="carousel-inner">
         {/* Slide 1 */}
         <div className="carousel-item active">
-          <img src="/images/cover1.jpg" className="d-block w-100  " alt="Slide 1" />
+          <img src="/images/cover1.jpg" className="d-block w-100" alt="Slide 1" />
           <div className="carousel-caption">
-            <button className="btn">Book a Consultation</button>
-            <button className="btn">View Gallery</button>
+            <button className="btn" onClick={handleBookConsultation}>
+              Book a Consultation
+            </button>
+            <button className="btn" onClick={handleViewGallery} >View Gallery</button>
           </div>
         </div>
         {/* Slide 2 */}
         <div className="carousel-item">
           <img src="/images/cover2.png" className="d-block w-100" alt="Slide 2" />
           <div className="carousel-caption">
-            <button className="btn">Book a Consultation</button>
-            <button className="btn">View Gallery</button>
+            <button className="btn" onClick={handleBookConsultation}>
+              Book a Consultation
+            </button>
+            <button className="btn" onClick={handleViewGallery} >View Gallery</button>
           </div>
         </div>
         {/* Slide 3 */}
         <div className="carousel-item">
           <img src="/images/cover3.png" className="d-block w-100" alt="Slide 3" />
           <div className="carousel-caption">
-            <button className="btn">Book a Consultation</button>
-            <button className="btn">View Gallery</button>
+            <button className="btn" onClick={handleBookConsultation}>
+              Book a Consultation
+            </button>
+            <button className="btn" onClick={handleViewGallery}>View Gallery</button>
           </div>
         </div>
       </div>

@@ -1,178 +1,218 @@
-/* Navbar container */
-.navbar {
+ /* Navbar container */
+ .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+  font-family: 'Cormorant Upright', serif;
+  position: relative;
+  z-index: 1000;
+ 
+}
+
+/* Navbar inner container */
+.navbar-container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem 2rem;
-    background-color: white;
-    border-bottom: 1px solid #ddd;
-    font-family: 'Cormorant Upright', serif;
-    position: relative;
-    z-index: 1000;
-  }
-  
-  /* Navbar inner container */
-  .navbar-container {
-    display: flex;
-    align-items: center;
+    align-items: center; /* Ensures vertical alignment */
     width: 100%;
     justify-content: space-between;
     position: relative;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+  margin-right: 15px; /* Adjusted for consistent alignment */
+}
+
+.hamburger .line {
+  width: 100%;
+  height: 3px;
+  background-color: black;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.hamburger .line.open:nth-child(1) {
+  transform: rotate(45deg) translateY(7px);
+}
+
+.hamburger .line.open:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger .line.open:nth-child(3) {
+  transform: rotate(-45deg) translateY(-7px);
+}
+
+/* Logo */
+.logo {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #cfa144;
+  text-transform: uppercase;
+  white-space: nowrap; /* Prevent wrapping */
+  transition: all 0.3s ease;
+  z-index: 100; /* Ensure logo stays on top */
+}
+
+/* Navigation Links */
+/* Navigation Links */
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  list-style: none;
+  font-family: 'Cormorant Upright', serif;
+  padding-top: 5px; /* Adjust this value to move the links lower */
+  margin-left: -140px; /* Move the entire nav-links container 20px to the left */
+}
+
+.nav-links li {
+  padding: 0 20px; /* Add horizontal padding */
+  font-size: 20px;
+  font-weight: lighter;
+  font-family: 'Cormorant Upright', serif;
+  padding-top: 9px; /* Keeps links aligned vertically */
+  justify-content: center;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #cfa144;
+  transition: color 0.3s ease;
+  letter-spacing: 3px; /* Reduced for better readability */
+}
+
+.nav-links li a:hover {
+  color: #d8b76c;
+}
+
+
+/* Search and Cart Icons */
+.nav-icons {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1.5rem;
+  align-items: center;
+  margin-right: 2rem; 
+}
+
+.icon {
+  color: black;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.icon:hover {
+  color: #A37107; /* Golden color */
+}
+
+/* Responsive: Mobile View */
+@media (max-width: 768px) {
+  .navbar-container {
+    justify-content: space-between;
   }
-  
-  /* Hamburger Menu */
+
+  /* Hamburger Menu Visible */
   .hamburger {
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 25px;
-    height: 20px;
+    width: 30px;
+    height: 25px;
     cursor: pointer;
+    margin-right: 16px; /* Ensure alignment with logo */
+    z-index: 20; /* Ensure it's on top of other elements */
   }
-  
+
   .hamburger .line {
     width: 100%;
     height: 3px;
     background-color: black;
     transition: transform 0.3s, opacity 0.3s;
   }
-  
+
+  /* Open State for Hamburger Menu */
   .hamburger .line.open:nth-child(1) {
-    transform: rotate(45deg) translateY(7px);
+    transform: rotate(45deg) translateY(8px);
   }
-  
+
   .hamburger .line.open:nth-child(2) {
     opacity: 0;
   }
-  
+
   .hamburger .line.open:nth-child(3) {
-    transform: rotate(-45deg) translateY(-7px);
+    transform: rotate(-45deg) translateY(-8px);
   }
-  
-  /* Logo */
+
+  /* Centered Logo for Mobile */
   .logo {
-    font-size: 1.8rem;
-    font-weight: 600;
-    color: #cfa144;
-    text-transform: uppercase;
-    white-space: nowrap; /* Prevent wrapping */
-    transition: all 0.3s ease;
+    position: absolute;
+    top: 18px; /* Ensure it's not overlapping the menu */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+    font-weight: bold;
+    z-index: 15; /* Ensure it stays on top */
+    background-color: white; /* Add background to avoid overlap */
+    margin-top: -14px;
   }
-  
+
   /* Navigation Links */
-  .nav-links {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-    margin: 0;
-  }
-  
-  .nav-links li {
-    font-size: 1rem;
-    font-weight: 400;
-  }
-  
-  .nav-links li a {
-    text-decoration: none;
-    color: #cfa144;
-    transition: color 0.3s ease;
-  }
-  
-  .nav-links li a:hover {
-    color: #d8b76c;
-  }
-  
+  /* Navigation Links */
+.nav-links {
+  margin-left: 1px;
+  position: absolute;
+  margin-top: 20px;
+  top: 0;
+  left: 0;
+  width: 98%;
+  height: auto; /* Automatically adjust height based on content */
+  background-color: white;
+  flex-direction: column;
+  justify-content: flex-start; /* Align menu items at the top */
+  align-items: center;
+  padding: 20px 0; /* Reduce top and bottom padding */
+  transform: translateY(-200%);
+  opacity: 0;
+  z-index: 10;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.nav-links.open {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.nav-links li {
+  padding: 10px 0; /* Adjust vertical spacing between links */
+  text-align: center;
+}
+
+.nav-links li a {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #cfa144;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #d8b76c;
+}
+
   /* Search and Cart Icons */
   .nav-icons {
-    display: flex;
-    gap: 1.5rem;
-    font-size: 1.5rem;
-    align-items: center;
+    position: absolute;
+    top: 10px; /* Align with the logo */
+    right: 0px;
+    margin-right: 10px; /* Adjusted for consistent alignment */
+    margin-top: -8px;
+    z-index: 15;
   }
-  
-  /* Icons Styling */
-  .icon {
-    color: black;
-    cursor: pointer;
-    transition: color 0.3s ease;
-  }
-  
-  .icon:hover {
-    color: #cfa144; /* Golden color */
-  }
-  
-  /* Responsive: Mobile View */
-  @media (max-width: 768px) {
-    .navbar-container {
-      justify-content: space-between;
-    }
-  
-    /* Hamburger Menu Visible */
-    .hamburger {
-      display: flex;
-    }
-  
-    /* Centered Logo for Mobile */
-    .logo {
-      position: absolute;
-      left: 47%;
-      transform: translateX(-50%);
-      font-size: 1.5rem; /* Slightly smaller logo for mobile */
-    }
-  
-    /* Hide Navigation Links */
-    .nav-links {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      background-color: white;
-      flex-direction: column;
-      align-items: center;
-      transform: translateY(-200%);
-      opacity: 0;
-      z-index: 10;
-      padding: 1rem 0;
-      transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-    }
-  
-    .nav-links.open {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  
-    .nav-links li {
-      margin: 1rem 0;
-    }
-  
-    /* Search and Cart Icons */
-    .nav-icons {
-      position: relative;
-      right: 0;
-    }
-  }
-  
-  /* Responsive: Desktop View */
-  @media (min-width: 769px) {
-    /* Logo on the Left */
-    .logo {
-      position: static;
-      transform: none;
-      font-size: 1.8rem; /* Reset to default size */
-    }
-  
-    /* Navigation Links Inline */
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-      position: static;
-      transform: none;
-      opacity: 1;
-    }
-  
-    .nav-icons {
-      position: static;
-      gap: 1.5rem;
-    }
-  }
-  
+}
