@@ -1,26 +1,136 @@
+.testimonials {
+  padding: 3rem;
+  text-align: center;
+  background-image: url('/public/images/background.png'); /* Replace with the actual image path */
+  background-size: cover; /* Ensures the image covers the entire section */
+  background-position: center; 
+}
+
+.customer-stories-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5rem;
+  margin-top: 10px;
+}
+
+.customer-stories-button {
+  margin-top: 30px;
+  padding: 0.2rem 2rem;
+  font-size: 2rem;
+  font-family: 'Cormorant Upright', serif;
+  color: #A37107;
+  background-color: transparent;
+  border: 1px solid #000000;
+  border-radius: 35px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.customer-stories-button:hover {
+  background-color: #A37107;
+  color: #fff;
+}
+
+.testimonials h1 {
+  font-size: 4rem;
+  color: #FF0000;
+  font-family: "Cormorant Upright", serif;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.testimonials p {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-family: "Cormorant Upright", serif;
+  color: #A37107;
+}
+
 .testimonial-grid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 2rem;
+  max-width: 1200px; /* Limit width of grid on larger screens */
+  margin: 0 auto; /* Center the grid */
+}
+
+.testimonial-card {
+  background: white;
+  padding: 1.5rem ;
+  border-radius: 40px;
+  border: 1px solid #000000;
+  position: relative;
+  text-align: left;
+  display: flex; /* Enables flexible layout */
+  flex-direction: column; /* Stacks elements vertically */
+}
+
+.testimonial-card p {
+  font-family: "Cormorant Upright" serif;
+  font-size: 20px;
+  color: #000000;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  flex-grow: 1; /* Allows text to take available space */
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: auto; /* Push profile section to the bottom if needed */
+}
+
+.profile img {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px; /* Rounded corners for the image */
+}
+
+.profile span {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .testimonial-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
-  
+}
+
+@media (max-width: 768px) {
+  .customer-stories-button-container {
+    margin-top: -150px;
+  }
+  .customer-stories-button {
+
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+  }
+  .customer-stories-button :hover{
+    color: #A37107;
+  }
   .testimonials h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
-  
+
   .testimonials p {
+    font-size: 1.2rem;
+  }
+
+  .testimonial-card {
+    padding: 1.2rem;
+  }
+
+  .profile img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .profile span {
     font-size: 0.9rem;
   }
-  
-  @media (max-width: 768px) {
-    .testimonial-grid {
-      gap: 0.5rem;
-    }
-  
-    .testimonials h1 {
-      font-size: 1.5rem;
-    }
-  
-    .testimonials p {
-      font-size: 0.8rem;
-    }
-  }
-  
+}

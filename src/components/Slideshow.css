@@ -1,11 +1,11 @@
 /* Carousel Container */
 .carousel {
-    height: 500px; /* Default height */
+    height: 800px; /* Default height */
   }
   
   .carousel img {
     object-fit: cover;
-    height: 500px; /* Default image height */
+    height: 800px; /* Default image height */
   }
   
   /* Caption and Button Styles */
