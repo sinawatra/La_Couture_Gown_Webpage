@@ -153,7 +153,7 @@
   /* Centered Logo for Mobile */
   .logo {
     position: absolute;
-    top: 18px; /* Ensure it's not overlapping the menu */
+    top: 11px; /* Ensure it's not overlapping the menu */
     left: 50%;
     transform: translateX(-50%);
     font-size: 1.5rem;
@@ -209,7 +209,7 @@
   /* Search and Cart Icons */
   .nav-icons {
     position: absolute;
-    top: 10px; /* Align with the logo */
+    top: 15px; /* Align with the logo */
     right: 0px;
     margin-right: 10px; /* Adjusted for consistent alignment */
     margin-top: -8px;
