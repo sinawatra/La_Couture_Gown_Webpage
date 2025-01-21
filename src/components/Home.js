@@ -4,18 +4,12 @@ import Slideshow from './Slideshow';
 import GridGallery from './GridGallery';
 import Footer from './Footer';
 
-const Home = () => {
-  const images = [
-    { src: 'cover.png', alt: 'Gown 1', price: '$785', stock: 'In stock' },
-    { src: '/images/', alt: 'Gown 1', price: '$785', stock: 'In stock' },
-    // Add more gown details here
-  ];
-
+const Home = ({ onAddToCart }) => {
   return (
     <div>
       <Navbar />
       <Slideshow />
-      <GridGallery images={images} />
+      <GridGallery onAddToCart={onAddToCart} />
       <Footer />
     </div>
   );

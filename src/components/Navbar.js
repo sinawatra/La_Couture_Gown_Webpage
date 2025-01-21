@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import './Navbar.css';
 import { FiSearch, FiShoppingCart } from 'react-icons/fi';
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const toggleMenu = () => {
     setIsMenuOpen((prev) => !prev);
@@ -12,17 +14,12 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        {/* Hamburger Menu */}
         <div className="hamburger" onClick={toggleMenu}>
           <span className={`line ${isMenuOpen ? 'open' : ''}`}></span>
           <span className={`line ${isMenuOpen ? 'open' : ''}`}></span>
           <span className={`line ${isMenuOpen ? 'open' : ''}`}></span>
         </div>
-
-        {/* Logo */}
         <div className="logo">La Couture</div>
-
-        {/* Navigation Links */}
         <ul className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
           <li><a href="/">Home</a></li>
           <li><a href="/gallery">Gallery</a></li>
@@ -30,11 +27,9 @@ const Navbar = () => {
           <li><a href="/about">About</a></li>
           <li><a href="/contact">Contact</a></li>
         </ul>
-
-        {/* Search and Cart Icons */}
         <div className="nav-icons">
           <FiSearch className="icon" />
-          <FiShoppingCart className="icon" />
+          <FiShoppingCart className="icon" onClick={() => navigate('/cart')} />
         </div>
       </div>
     </nav>
