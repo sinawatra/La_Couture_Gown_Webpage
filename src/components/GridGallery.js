@@ -5,7 +5,7 @@ const GridGallery = ({ onAddToCart }) => {
   const [selectedCategory, setSelectedCategory] = useState('All');
 
   const products = [
-    { id: 1, name: 'Gown 1', price: '$785', stock: 'In stock', image: '/images/g1.jpg', type: 'Popular' },
+    { id: 1, name: 'Gown 1', price: '$1', stock: 'In stock', image: '/images/g1.jpg', type: 'Popular' },
     { id: 2, name: 'Gown 2', price: '$835', stock: 'In stock', image: '/images/g2.jpg', type: 'Exotic' },
     { id: 3, name: 'Gown 3', price: '$650', stock: 'In stock', image: '/images/g3.jpg', type: 'Khmer Style' },
     { id: 4, name: 'Gown 4', price: '$900', stock: 'In stock', image: '/images/g4.jpg', type: 'International Style' },
