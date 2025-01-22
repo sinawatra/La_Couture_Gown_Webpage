@@ -11,7 +11,7 @@ const Slideshow = () => {
     navigate("/contact"); // Navigate to the Contact page
   };
   const handleViewGallery= () => {
-    navigate("/"); 
+    navigate("/gallery"); 
   };
 
   return (
