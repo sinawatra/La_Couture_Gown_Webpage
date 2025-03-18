@@ -1,23 +1,22 @@
- /* Navbar container */
- .navbar {
+/* Navbar container */
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: white;
   border-bottom: 1px solid #ddd;
-  font-family: 'Cormorant Upright', serif;
+  font-family: "Cormorant Upright", serif;
   position: relative;
   z-index: 1000;
- 
 }
 
 /* Navbar inner container */
 .navbar-container {
-    display: flex;
-    align-items: center; /* Ensures vertical alignment */
-    width: 100%;
-    justify-content: space-between;
-    position: relative;
+  display: flex;
+  align-items: center; /* Ensures vertical alignment */
+  width: 100%;
+  justify-content: space-between;
+  position: relative;
 }
 
 /* Hamburger Menu */
@@ -67,7 +66,7 @@
 .nav-links {
   display: flex;
   list-style: none;
-  font-family: 'Cormorant Upright', serif;
+  font-family: "Cormorant Upright", serif;
   padding-top: 5px; /* Adjust this value to move the links lower */
   margin-left: -140px; /* Move the entire nav-links container 20px to the left */
 }
@@ -76,7 +75,7 @@
   padding: 0 20px; /* Add horizontal padding */
   font-size: 20px;
   font-weight: lighter;
-  font-family: 'Cormorant Upright', serif;
+  font-family: "Cormorant Upright", serif;
   padding-top: 9px; /* Keeps links aligned vertically */
   justify-content: center;
 }
@@ -92,14 +91,49 @@
   color: #d8b76c;
 }
 
-
 /* Search and Cart Icons */
 .nav-icons {
   display: flex;
   gap: 1.5rem;
   font-size: 1.5rem;
   align-items: center;
-  margin-right: 2rem; 
+  margin-right: 2rem;
+}
+
+/* Cart Icon with Badge */
+.cart-icon-container {
+  position: relative;
+  display: inline-flex;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: #a37107;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  animation: pulse 0.5s ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .icon {
@@ -109,7 +143,7 @@
 }
 
 .icon:hover {
-  color: #A37107; /* Golden color */
+  color: #a37107; /* Golden color */
 }
 
 /* Responsive: Mobile View */
@@ -165,46 +199,46 @@
 
   /* Navigation Links */
   /* Navigation Links */
-.nav-links {
-  margin-left: 1px;
-  position: absolute;
-  margin-top: 20px;
-  top: 0;
-  left: 0;
-  width: 98%;
-  height: auto; /* Automatically adjust height based on content */
-  background-color: white;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 20px 0; /* Reduce top and bottom padding */
-  transform: translateY(-200%);
-  opacity: 0;
-  z-index: 10;
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-}
+  .nav-links {
+    margin-left: 1px;
+    position: absolute;
+    margin-top: 20px;
+    top: 0;
+    left: 0;
+    width: 98%;
+    height: auto; /* Automatically adjust height based on content */
+    background-color: white;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px 0; /* Reduce top and bottom padding */
+    transform: translateY(-200%);
+    opacity: 0;
+    z-index: 10;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  }
 
-.nav-links.open {
-  transform: translateY(0);
-  opacity: 1;
-}
+  .nav-links.open {
+    transform: translateY(0);
+    opacity: 1;
+  }
 
-.nav-links li {
-  padding: 10px 0; 
-  text-align: center;
-}
+  .nav-links li {
+    padding: 10px 0;
+    text-align: center;
+  }
 
-.nav-links li a {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #cfa144;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
+  .nav-links li a {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #cfa144;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
 
-.nav-links li a:hover {
-  color: #d8b76c;
-}
+  .nav-links li a:hover {
+    color: #d8b76c;
+  }
 
   /* Search and Cart Icons */
   .nav-icons {
@@ -216,3 +250,4 @@
     z-index: 15;
   }
 }
+
