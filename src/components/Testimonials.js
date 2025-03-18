@@ -1,5 +1,4 @@
 import React from 'react';
-import Navbar from './Navbar';
 import Footer from './Footer';
 import '../components/Testimonials.css';
 import { motion } from 'framer-motion';
@@ -71,7 +70,6 @@ const Testimonials = () => {
 
   return (
     <div>
-      <Navbar />
       <div className="customer-stories-button-container">
         <button className="customer-stories-button">Customer Stories</button>
       </div>

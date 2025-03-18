@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Navbar from './Navbar';
 import Footer from './Footer';
 import '../components/Contact.css';
 
@@ -17,7 +16,6 @@ const Contact = () => {
 
   return (
     <div>
-      <Navbar />
       <div className="contact">
         <div className="map-section">
           <div className="gmap-frame">
